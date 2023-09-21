@@ -13,7 +13,7 @@ services:
        - traefik.http.routers.cra.tls.certresolver=le
 
 # 一定要与 traefik 在同一网络下
-networks:
-  default:
-    external:
-      name: traefik_default
+# networks:
+#   default:
+#     external:
+#       name: traefik_default
