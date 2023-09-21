@@ -7,16 +7,17 @@ services:
     ports:
       - 4000:80
 
-    # labels:
-    #   # 配置域名
-    #    - "traefik.http.routers.cra.rule=Host(`cra.shanyue.tech`)"
+    labels:
+      # 配置域名
+      #  - "traefik.http.routers.cra.rule=Host(`cra.shanyue.tech`)"
+       - "traefik.http.routers.cra.rule=Host(`http://8.134.97.101`)"
 
-    #    # 配置 TLS
-    #    - traefik.http.routers.cra.tls=true
-    #    - traefik.http.routers.cra.tls.certresolver=le
+       # 配置 TLS
+       - traefik.http.routers.cra.tls=true
+       - traefik.http.routers.cra.tls.certresolver=le
 
 # 一定要与 traefik 在同一网络下
-# networks:
-#   default:
-#     external:
-#       name: traefik_default
+networks:
+  default:
+    external:
+      name: traefik_default
