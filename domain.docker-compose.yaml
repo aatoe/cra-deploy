@@ -4,8 +4,8 @@ services:
     build:
       context: .
       dockerfile: router.Dockerfile
-    ports:
-      - 4000:80
+    # ports:
+    #   - 4000:80
 
     labels:
       # 配置域名
