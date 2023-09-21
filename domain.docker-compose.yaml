@@ -4,13 +4,13 @@ services:
     build:
       context: .
       dockerfile: router.Dockerfile
-    labels:
-      # 配置域名
-       - "traefik.http.routers.cra.rule=Host(`cra.shanyue.tech`)"
+    # labels:
+    #   # 配置域名
+    #    - "traefik.http.routers.cra.rule=Host(`cra.shanyue.tech`)"
 
-       # 配置 TLS
-       - traefik.http.routers.cra.tls=true
-       - traefik.http.routers.cra.tls.certresolver=le
+    #    # 配置 TLS
+    #    - traefik.http.routers.cra.tls=true
+    #    - traefik.http.routers.cra.tls.certresolver=le
 
 # 一定要与 traefik 在同一网络下
 # networks:
