@@ -10,11 +10,11 @@ services:
     labels:
       # 配置域名
       #  - "traefik.http.routers.cra.rule=Host(`cra.shanyue.tech`)"
-       - "traefik.http.routers.cra.rule=Host(`http://8.134.97.101`)"
+       - "traefik.http.routers.cra.rule=Host(`8.134.97.101`)"
 
        # 配置 TLS
-       - traefik.http.routers.cra.tls=true
-       - traefik.http.routers.cra.tls.certresolver=le
+      #  - traefik.http.routers.cra.tls=true
+      #  - traefik.http.routers.cra.tls.certresolver=le
 
   # traefik:
   #   image: traefik:v2.5
