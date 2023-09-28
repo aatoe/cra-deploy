@@ -1,5 +1,5 @@
 name: CI Env Check
-on: [push]
+# on: [push]
 jobs:
   env:
     runs-on: ubuntu-latest
