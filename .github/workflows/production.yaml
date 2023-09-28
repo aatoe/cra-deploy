@@ -10,21 +10,21 @@ on:
 
 # 执行所有的 jobs
 jobs:
-  # deploy:
-    # # 该 Job 在自建的 Runner 中执行
-    # runs-on: self-hosted
-    # # environment:
-    # #   # 获取 CICD 中的变量: Context
-    # #   # https://docs.github.com/en/actions/learn-github-actions/expressions
-    # #   name: Deploy
-    # #   url: https://cra.shanyue.tech
-    # steps:
-    #   # 切出代码，使用该 Action 将可以拉取最新代码
-    #   - uses: actions/checkout@v2
-    #   - name: Deploy
-    #     run: docker-compose -f domain.docker-compose.yaml up --build -d domain
-    #     env:
-    #       COMMIT_REF_NAME: ${{ github.ref_name }}
+  deploy:
+    # 该 Job 在自建的 Runner 中执行
+    runs-on: self-hosted
+    # environment:
+    #   # 获取 CICD 中的变量: Context
+    #   # https://docs.github.com/en/actions/learn-github-actions/expressions
+    #   name: Deploy
+    #   url: https://cra.shanyue.tech
+    steps:
+      # 切出代码，使用该 Action 将可以拉取最新代码
+      - uses: actions/checkout@v2
+      - name: Deploy
+        run: docker-compose -f domain.docker-compose.yaml up --build -d domain
+        env:
+          COMMIT_REF_NAME: ${{ github.ref_name }}
 
   check-bats-version:
     runs-on: ubuntu-latest
@@ -35,7 +35,3 @@ jobs:
       #     node-version: '14'
       # - run: npm install -g bats
       # - run: bats -v
-   check-bats-version2222:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
