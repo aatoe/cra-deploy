@@ -35,3 +35,7 @@ jobs:
       #     node-version: '14'
       # - run: npm install -g bats
       # - run: bats -v
+   check-bats-version2222:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
