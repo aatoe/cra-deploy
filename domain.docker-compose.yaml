@@ -9,8 +9,8 @@ services:
 
     labels:
       # 配置域名
-       - "traefik.http.routers.cra.rule=Host(`gzb-full-stack.top`)"
-      #  - "traefik.http.routers.cra.rule=Host(`8.134.97.101`)"
+      #  - "traefik.http.routers.cra.rule=Host(`gzb-full-stack.top`)"
+       - "traefik.http.routers.cra.rule=Host(`8.134.97.101`)"
 
        # 配置 TLS
       #  - traefik.http.routers.cra.tls=true
